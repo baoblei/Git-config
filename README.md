@@ -14,6 +14,10 @@ $ cat ~/.ssh/id_rsa.pub
 $ ssh -T git@github.com
 ```
 
+## 本地pull远程仓库
+```bash
+$ git pull ssh://***.git
+```
 ## 设置Git用户
 ```bash
 $ git config --global user.name [username]
