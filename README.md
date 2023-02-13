@@ -19,10 +19,20 @@ $ ssh -T git@github.com
 $ git config --global user.name [username]
 $ git config --global user.email [email]
 ```
+## 关联远程仓库
+```bash
+$ git remote add origin ssh://***.git
+```
+
+## 查看/删除关联的仓库
+```bash
+$ git remote -v
+$ git remote rm origin
+```
 
 ## 确认远程仓库分支
 ```bash
-$ git remote show origin
+$ git remote show origin 
 ```
 ## 推送新分支
 ```bash
