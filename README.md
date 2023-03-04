@@ -86,11 +86,15 @@ $ git push -u origin main   # “-u” 会创建新分支
     -   匹配模式最后跟反斜杠（/）说明要忽略的是目录；
     -   匹配模式以反斜杠（/）开头说明防止递归；
     -   要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。
-- 将已上传的杂项文件去除
+- git清除本地缓存（改变成未track状态），然后再提交
 ```bash
 git rm -r --cached .
 git add .
 git commit -m 'update .gitignore'
+```
+-   在每个clone下来的仓库中手动设置不要检查特定文件的更改情况
+```bash
+git update-index --assume-unchanged PATH                  //在PATH处输入要忽略的文件
 ```
 -   将https改为ssh
 ```bash
