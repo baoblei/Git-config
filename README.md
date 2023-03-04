@@ -74,7 +74,24 @@ $ git remote show origin
 ```bash
 $ git push -u origin main   # “-u” 会创建新分支
 ```
+- 设置忽略文件
+  .gitignore
+  语法规范:.gitignore 可以使用标准的 glob 模式匹配（glob 模式是指 shell 所使用的简化了的正则表达式）：
 
+    -   所有空行或者以注释符号 # 开头的行都会被 Git 忽略；
+    -   星号（*）匹配零个或多个任意字符；
+    -   [abc] 匹配任何一个列在方括号中的字符；
+    -   问号（?）只匹配一个任意字符；
+    -   [a-z] 匹配所有在这两个字符范围内的字符；
+    -   匹配模式最后跟反斜杠（/）说明要忽略的是目录；
+    -   匹配模式以反斜杠（/）开头说明防止递归；
+    -   要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。
+- 将已上传的杂项文件去除
+```bash
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+```
 -   将https改为ssh
 ```bash
 git remote rm origin
