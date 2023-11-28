@@ -104,6 +104,7 @@ git push -u origin main
 ```
 
 ## clone/fetch/merge/pull
+![](https://cdn.jsdelivr.net/gh/baoblei/imgs_md/20231128101844.png)
 ### clone 
 - 自动将远程主机命名为 origin，拉取它的所有数据。
 
