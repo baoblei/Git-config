@@ -62,6 +62,7 @@ git branch          # 查看本地所有分支
 git branch 新分支    # 创建新分支
 git checkout 分支名  # 切换分支
 git branch -d 分支名 # 删除分支，只能删除当前工作分支外的分支  -D 为强制删除
+git push <remote> --delete <branch> # 删除远程分支
 git checkout -b 分支名 # 创建并直接切换分支
 git merge 分支名       # 合并分支
 ```
@@ -104,7 +105,9 @@ git push -u origin main
 ```
 
 ## clone/fetch/merge/pull
+
 ![](https://cdn.jsdelivr.net/gh/baoblei/imgs_md/20231128101844.png)
+
 ### clone 
 - 自动将远程主机命名为 origin，拉取它的所有数据。
 
@@ -114,6 +117,25 @@ git push -u origin main
 ![](https://cdn.jsdelivr.net/gh/baoblei/imgs_md/20230304211628.png)
   
 ### fetch
+- 同步远程的代码库更新
+```
+git fetch <远程代码库名>//将指定远程库的更新全部取回本地
+git fetch <远程代码库名> <远程分支名> //可以指定拉取远程哪个分支
+-------
+git merge <远程代码库名>/<远程分支名> //要是用git fetch拉取远程代码更新之后，git log FETCH_HEAD之后判断没有冲突后，用这个命令合并到本地分支上了
+
+```
+
+### merge 
+- 远程分支merge到本地分支
+
+`git merge <远程代码库名>/<远程分支名>`
+
+- 提示没有上游跟踪分支按照提示建立本地与上游的跟踪即可
+  
+### pull
+fetch + merge
+
 
 
 
